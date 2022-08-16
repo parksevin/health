@@ -1,0 +1,444 @@
+@charset "UTF-8";
+@import url(./font.css);
+@import url(./reset.css);
+
+#wrap { width: 100%; }
+#wrap .container { 
+    width: 900px; 
+    margin: 0 auto; 
+    position: relative;
+    z-index: 2;
+}
+#wrap .container #header {width: 100%; position: relative; }
+#wrap .container #header .title { width: 100%; margin: 100px 0 40px 0;}
+#wrap .container #header .title h1 {
+    width: 100%; 
+    height: 40px; 
+    font-size: 32px; 
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+    color: #3a3a4a;
+    font-family: 'Noto Sans KR';
+}
+#wrap .container #header .title ul { 
+    width: 92px; 
+    height: 40px; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    display: flex;
+}
+#wrap .container #header .title ul li:nth-child(2) {
+    margin-left: 12px;
+}
+#wrap .container #header .title ul li a {
+    width: 40px;
+    height: 40px;
+    background: #f6f6f6;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 16px;
+    display: inline-block;
+}
+#wrap .container #header .title ul li a:hover {
+    background-color: #44465c;
+}
+#wrap .container #header .title ul li a .img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url() no-repeat 50% 50%;
+}
+#wrap .container #header .title ul li:nth-child(1) a .img:hover {
+    background-image: url(../images/ico-print_hover.png);
+}
+#wrap .container #header .title ul li:nth-child(2) a .img:hover {
+    background-image: url(../images/ico-share-hover.png);
+}
+#wrap .container #header .title ul li a .a {background: url(../images/ico-print.png) no-repeat 50% 50%;}
+#wrap .container #header .title ul li a .b {background: url(../images/ico-share.png) no-repeat 50% 50%;}
+
+
+
+#wrap .container #header .step {
+    width: 100%;
+}
+#wrap .container #header .step .box {
+    width: 100%;
+    height: 48px;
+    padding-left: 2px;
+}
+#wrap .container #header .step .box ol {
+    display: flex;
+    width: 100%;
+}
+#wrap .container #header .step .box ol li {
+    width: 33.333%;
+    height: 48px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #a7acb4;
+    background: #f6f6f6;
+    margin: 0 0 0 -1px;
+}
+#wrap .container #header .step .box ol li:nth-child(1) {
+    border-right: none;
+}
+#wrap .container #header .step .box ol li:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+#wrap .container #header .step .box ol li:nth-child(3) {
+    border-left: none;
+}
+
+#wrap .container #header .step .box ol li.cur {
+    background-color: #44465c;
+    border: 1px solid #44465c;
+    position: relative;
+ }
+ #wrap .container #header .step .box ol li.cur2 {
+    position: relative;
+ }
+/* #wrap .container #header .step .box ol li.cur::before {
+    content: '';
+    width: 22px;
+    height: 48px;
+    position: absolute;
+    top: -1px;
+    left: -2px;
+    border: 0;
+    background: url(../images/arrow-progress-on-2.png) no-repeat;
+} */ 
+#wrap .container #header .step .box ol li.cur::after {
+    content: '';
+    width: 22px;
+    height: 48px;
+    position: absolute;
+    top: -1px;
+    right: -21px;
+    border: 0;
+    z-index: 2;
+    background: url(../images/arrow-progress-on.png) no-repeat;
+}
+
+#wrap .container #header .step .box ol li.cur2::after {
+    content: '';
+    width: 22px;
+    height: 48px;
+    position: absolute;
+    top: -1px;
+    right: -21px;
+    border: 0;
+    background: url(../images/arrow-progress.png) no-repeat;
+}
+
+
+#wrap .container #header .step .box ol li.cur strong,#wrap .container #header .step .box ol li.cur span {
+    color: #fff;
+}
+
+#wrap .container #header .step .box ol li strong {
+    color: #3a3a4a;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top:2%;
+    left:0;
+}
+#wrap .container #header .step .box ol li span {
+    color: #3a3a4a;
+    font-size: 15px;
+    position: relative;
+    top:1px;
+}
+
+#wrap .container #header .step .guide {
+    width: 100%;
+    padding: 25px 30px;
+    margin-top: 40px;
+    border: 1px solid #e1e3e6;
+    
+}
+
+#wrap .container #header .step .guide p strong {
+    color: #d7021b;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
+
+#wrap .container #main {}
+#wrap .container #main .border-box { 
+    margin-top: 40px;
+    border: 1px solid #e1e3e6;
+}
+#wrap .container #main .border-box .box-title {
+    padding: 10px 20px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #e1e3e6;
+    position: relative;
+}
+#wrap .container #main .border-box .box-title h2 {
+    color: #3a3a4a;
+    font-size: 21px;
+    font-weight: 700;
+}
+#wrap .container #main .border-box .box-title h2 span {
+    color: #d7021b;
+}
+
+#wrap .container #main .border-box .box-content {
+    padding: 25px 30px;
+    height: 240px;
+    overflow-y: scroll;
+}
+#wrap .container #main .border-box .box-content .top-title {
+    display: block;
+    color: #3b3b3b;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#wrap .container #main .border-box .box-content .terms {
+    margin-bottom: 20px;
+}
+#wrap .container #main .border-box .box-content .terms .tit {
+    display: block;
+    color: #3b3b3b;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#wrap .container #main .border-box .box-content .terms p {
+    margin-bottom: 15px;
+}
+
+#wrap .container #main .border-box .box-content .terms>ol.round-num {}
+#wrap .container #main .border-box .box-content .terms>ol>li {
+    margin-top: 7px;
+    position: relative;
+    padding-left: 17px;
+}
+#wrap .container #main .border-box .box-content .terms>ol.round-num>li>em.number {
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 10px;
+    border: 1px solid #6c6d73;
+    top: 4px;
+}
+#wrap .container #main .border-box .box-content .terms ol li .number {
+    color: #6c6d73;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+}
+
+#wrap .container #main .border-box .box-content .terms>ol>li>ol.k-num {
+    margin: 5px 0;
+}
+#wrap .container #main .border-box .box-content .terms>ol>li>ol.k-num>li {
+    margin-top: 7px;
+    position: relative;
+    padding-left: 22px;
+}
+#wrap .container #main .border-box .box-content .terms>ol>li>ol.k-num>li>em {
+    position: absolute;
+    left:0;
+}
+
+#wrap .container #main .border-box .box-content .terms>ol>li>ol li {
+    margin-top: 7px;
+    position: relative;
+    padding-left: 15px;
+}
+#wrap .container #main .border-box .box-content .terms>ol>li>ol li.ch {
+    padding-left: 23px;
+}
+
+#wrap .container #main .border-box .box-content .terms>ol>li>ol li .number {
+    color: #6c6d73;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+}
+
+#wrap .container #main .border-box .agree {
+    padding: 15px 30px;
+    border-top: 1px solid #e1e3e6;
+}
+#wrap .container #main .border-box .agree .txt {
+    color: #6c6d73;
+    font-size: 15px;
+}
+#wrap .container #main .border-box .agree .agreechk {
+    position: relative;
+    float: right;
+}
+
+#wrap .container #main .border-box .agree .agreechk span {
+    position: relative;
+}
+
+#wrap .container #main .border-box .agree .agreechk span label {
+    position: relative;
+    padding: 3px 0 0 28px;
+}
+
+#wrap .container #main .border-box .agree .agreechk span input[type='radio'] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 0;
+    background: #fff;
+    z-index: 2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#wrap .container #main .border-box .agree .agreechk span [type='radio']:checked {
+    border: 6px solid #44465c;
+    border-radius: 50%;
+    appearance: none;
+}
+
+#wrap .container #main .border-box .agree .agreechk .chk-no {
+    margin-left: 15px;
+}
+
+/*box2*/
+
+#wrap .container #main .border-box .box-content .terms ol.box2 {
+    margin-top: 20px;
+}
+#wrap .container #main .border-box .box-content .terms ol.box2 li {
+    margin-top: 20px;
+}
+
+#wrap .container #main .border-box .box-content .terms ol.box2 li em {
+    color: #3b3b3b;
+    font-weight: 700;
+}
+
+#wrap .container #main .border-box .box-content .terms ol.box2 li .s-tit {
+    color: #3b3b3b;
+    font-weight: 700;
+}
+#wrap .container #main .border-box .box-content .terms ol.box2 li p {
+    margin: 10px 0 0 0;
+}
+#wrap .container #main .border-box .box-content .terms ol.box2 li p.red {
+    text-decoration: underline;
+    color: #d7021b;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#wrap .container #main .border-box:nth-child(2) .box-content .terms{
+    margin-bottom: 0;
+}
+
+/*box3*/
+
+#wrap .container #main .border-box:nth-child(3) .box-content .terms{
+    margin-bottom: 0;
+}
+
+#wrap .container #main .border-box .box-content .terms ol.box2 li p.aa {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 17px;
+    position: relative;
+}
+
+#wrap .container #main .border-box .box-content .terms ol.box2 li p.aa::before {
+    content: "※";
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+/*box4*/
+
+#wrap .container #main .border-box .warn {
+    padding: 15px 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+#wrap .container #main .border-box .warn h2 {
+    font-size: 14px;
+    padding-top: 1px;
+}
+#wrap .container #main .border-box .warn .ico-notice {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/ico-notice-2.png) no-repeat;
+    margin-right: 5px;
+}
+
+#wrap .container #main .border-box .box-content-noscroll{
+    padding: 25px 30px;
+}
+#wrap .container #main .border-box .box-content-noscroll ul {}
+#wrap .container #main .border-box .box-content-noscroll ul li { 
+    padding: 0 10px;
+    letter-spacing: -0.4px;
+    position: relative;
+}
+#wrap .container #main .border-box .box-content-noscroll ul li:nth-child(2){
+    margin-top: 6px;
+}
+
+#wrap .container #main .border-box .box-content-noscroll ul li::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #44465c;
+    border-radius: 7px;
+    top: 8px;
+    left:0;
+}
+
+/*버튼*/
+
+#wrap .container #main .button-box {
+    width: 100%;
+    margin: 30px 0 200px 0 ;
+    border: none;
+    text-align: center;
+}
+#wrap .container #main .button-box button {
+}
+#wrap .container #main .button-box button a {
+    display: block;
+    width: 80px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#wrap .container #main .button-box button.prev-btn a {
+    background-color: #fff;
+    color: #fff;
+    color: #44465c;
+    border: 1px solid #69727e;
+}
+#wrap .container #main .button-box button.next-btn a {
+    color: #fff;
+    background-color: #ee0700;
+    margin-left: 12px;
+}

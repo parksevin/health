@@ -1,0 +1,578 @@
+@charset "UTF-8";
+@import url(./font.css);
+@import url(./reset.css);
+
+#wrap { width: 100%; }
+#wrap .container { 
+    width: 900px; 
+    margin: 0 auto; 
+    position: relative;
+    z-index: 2;
+}
+#wrap .container #header {width: 100%; position: relative; }
+#wrap .container #header .title { width: 100%; margin: 100px 0 40px 0;}
+#wrap .container #header .title h1 {
+    width: 100%; 
+    height: 40px; 
+    font-size: 32px; 
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+    color: #3a3a4a;
+    font-family: 'Noto Sans KR';
+}
+#wrap .container #header .title ul { 
+    width: 92px; 
+    height: 40px; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    display: flex;
+}
+#wrap .container #header .title ul li:nth-child(2) {
+    margin-left: 12px;
+}
+#wrap .container #header .title ul li a {
+    width: 40px;
+    height: 40px;
+    background: #f6f6f6;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 16px;
+    display: inline-block;
+}
+#wrap .container #header .title ul li a:hover {
+    background-color: #44465c;
+}
+#wrap .container #header .title ul li a .img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url() no-repeat 50% 50%;
+}
+#wrap .container #header .title ul li:nth-child(1) a .img:hover {
+    background-image: url(../images/ico-print_hover.png);
+}
+#wrap .container #header .title ul li:nth-child(2) a .img:hover {
+    background-image: url(../images/ico-share-hover.png);
+}
+#wrap .container #header .title ul li a .a {background: url(../images/ico-print.png) no-repeat 50% 50%;}
+#wrap .container #header .title ul li a .b {background: url(../images/ico-share.png) no-repeat 50% 50%;}
+
+
+
+#wrap .container #header .step {
+    width: 100%;
+}
+#wrap .container #header .step .box {
+    width: 100%;
+    height: 48px;
+    padding-left: 2px;
+}
+#wrap .container #header .step .box ol {
+    display: flex;
+    width: 100%;
+}
+#wrap .container #header .step .box ol li {
+    width: 33.333%;
+    height: 48px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #a7acb4;
+    background: #f6f6f6;
+    margin: 0 0 0 -1px;
+}
+#wrap .container #header .step .box ol li:nth-child(1) {
+    border-right: none;
+}
+#wrap .container #header .step .box ol li:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+#wrap .container #header .step .box ol li:nth-child(3) {
+    border-left: none;
+}
+
+#wrap .container #header .step .box ol li.cur {
+    background-color: #44465c;
+    border: 1px solid #44465c;
+    position: relative;
+}
+#wrap .container #header .step .box ol li.cur::before {
+    content: '';
+    width: 22px;
+    height: 48px;
+    position: absolute;
+    top: -1px;
+    left: -2px;
+    border: 0;
+    background: url(../images/arrow-progress-on-2.png) no-repeat;
+}
+#wrap .container #header .step .box ol li.cur::after {
+    content: '';
+    width: 22px;
+    height: 48px;
+    position: absolute;
+    top: -1px;
+    right: -21px;
+    border: 0;
+    background: url(../images/arrow-progress-on.png) no-repeat;
+}
+#wrap .container #header .step .box ol li.cur::after {}
+
+#wrap .container #header .step .box ol li.cur strong,#wrap .container #header .step .box ol li.cur span {
+    color: #fff;
+}
+
+#wrap .container #header .step .box ol li strong {
+    color: #3a3a4a;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top:2%;
+    left:0;
+}
+#wrap .container #header .step .box ol li span {
+    color: #3a3a4a;
+    font-size: 15px;
+    position: relative;
+    top:1px;
+}
+
+#wrap .container #header .step .guide {
+    width: 100%;
+    padding: 25px 30px;
+    margin-top: 40px;
+    border: 1px solid #e1e3e6;
+    
+}
+
+#wrap .container #header .step .guide p strong {
+    color: #d7021b;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
+#wrap .container #main {}
+#wrap .container #main .compulsory {
+    font-size: 13px;
+    padding-left: 12px;
+    margin: 40px 0 5px 0;
+    position: relative;
+    top:0;
+
+}
+#wrap .container #main .compulsory::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top:7.5px;
+    left:0;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+}
+
+#wrap .container #main .content {
+    width: 100%;
+    margin-top: 10px;
+    border-top: 2px solid #44465c;
+}
+#wrap .container #main .content ul {
+    width: 100%;
+}
+
+#wrap .container #main .content ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-bottom: 1px solid #e1e3e6;
+}
+#wrap .container #main .content ul li .left {
+    width: 150px;
+    height: 100%;
+    padding: 13px 16px 13px 0;
+    text-align: left;
+    color: #3a3a4a;
+    font-size: 15px;
+    line-height: 43px;
+    margin: auto 0;
+}
+#wrap .container #main .content ul li.con7 .left{
+    line-height: 21px;
+}
+#wrap .container #main .content ul li.con8 .left{
+    line-height: 21px;
+}
+
+#wrap .container #main .content ul li .left .mark {
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: -2px;
+    left:0;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+#wrap .container #main .content ul li .right {
+    width: 750px;
+    padding: 15px 16px;
+    text-align: left;
+    font-size: 15px;
+    color: #3a3a4a;
+    margin: auto 0;
+}
+
+#wrap .container #main .content ul li .right input[type='text'],
+#wrap .container #main .content ul li .right input[type='password'],
+#wrap .container #main .content ul li .right input[type='email']
+{
+    background-color: #fff2f2;
+    border: 1px solid #ffd7d2;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    font-size: 15px;
+    padding: 0 11px;
+    color: #3a3a4a;
+}
+
+#wrap .container #main .content ul li .right input[type='text']:focus,
+#wrap .container #main .content ul li .right input[type='password']:focus,
+#wrap .container #main .content ul li .right input[type='email']:focus
+{
+    outline: 1px dotted #3a3a4a;
+}
+
+
+#wrap .container #main .content ul li .right input.success[type='text'],
+#wrap .container #main .content ul li .right input.success[type='password'],
+#wrap .container #main .content ul li .right input.success[type='email']
+{
+    background-color: #e9f6fd;
+}
+
+#wrap .container #main .content ul li .right input.error[type='text'],
+#wrap .container #main .content ul li .right input.error[type='password'],
+#wrap .container #main .content ul li .right input.error[type='email']
+{
+    background-color: #fff2f2;
+}
+
+
+#wrap .container #main .content ul li .right button {
+    border: 1px solid #69727e;
+    background: #fff;
+    color: #44465c;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+/*con1*/
+
+#wrap .container #main .content ul li.con1 .right button.firm-btn1 {
+    margin-left: 10px;
+}
+#wrap .container #main .content ul li.con1 .right button.firm-btn2 {
+    margin-left: 12px;
+    background: #44465c;
+    border: 1px solid #44465c;
+    color: #fff;
+}
+#wrap .container #main .content ul li.con1 .right button.firm-btn1:hover {
+    background: #f0f0f0;
+}
+#wrap .container #main .content ul li.con1 .right button.firm-btn2:hover {
+    background: #2e2f3d;
+    border: 1px solid #2e2f3d;
+}
+
+/*con2*/
+
+#wrap .container #main .content ul li.con2 .right input[type='text'] {
+    border: 1px solid #ccc;
+    color: #6c6d73;
+    background-color: #f1f1f1;
+    width: 718px;
+}
+
+/*con3*/
+
+#wrap .container #main .content ul li.con3 .right input[type='text'] {
+    background-color: #f1f1f1;
+    color: #6c6d73;
+    border: 1px solid #ccc;
+}
+
+#wrap .container #main .content ul li.con3 .right button.unitSerch {
+    margin-right: 14px;
+}
+#wrap .container #main .content ul li.con3 .right button.unitSerch:hover {
+    background: #f1f1f1;
+}
+
+#wrap .container #main .content ul li.con3 .right button.unit-btn {
+    margin-left: 10px;
+}
+#wrap .container #main .content ul li.con3 .right button.unit-btn:hover {
+    background: #f1f1f1;
+}
+
+/*con4*/
+
+#wrap .container #main .content ul li.con4 .right button {
+    margin-left: 10px;
+}
+#wrap .container #main .content ul li.con4 .right button:hover {
+    background: #f0f0f0;
+}
+
+/*con5,con6*/
+
+#wrap .container #main .content ul li.con5 .right input[type='password'],
+#wrap .container #main .content ul li.con6 .right input[type='password'],
+#wrap .container #main .content ul li.con6 .right input[type='text'],
+#wrap .container #main .content ul li.con7 .right input[type='text'],
+#wrap .container #main .content ul li.con8 .right input[type='text'],
+#wrap .container #main .content ul li.con11 .right input[type='text'] 
+{width: 75%;}
+
+/*con7*/
+
+#wrap .container #main .content ul li.con7 {
+    height: 100%;
+}
+
+#wrap .container #main .content ul li.con7 .right {
+}
+#wrap .container #main .content ul li.con7 .right select {
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 0 0 8px;
+    font-size: 15px;
+    background-color: #fff2f2;
+    border: 1px solid #ffd7d2;
+}
+
+#wrap .container #main .content ul li .right select:focus {
+    outline: 1px dotted #3a3a4a;
+}
+
+#wrap .container #main .content ul li.con7 .right input.pwQinput[type='text'] {
+    display: none;
+    margin-top: 10px;
+}
+
+#wrap .container #main .content ul li.con7 .right input.on[type='text'] {
+    display: block;
+}
+
+
+/*con9*/
+
+#wrap .container #main .content ul li.con9 .right input[type='text'] {
+    width: 340px;
+}
+
+/*con10*/
+
+#wrap .container #main .content ul li.con10 .right input[type='text'] {
+    width: 340px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+
+/*con12*/
+
+#wrap .container #main .content ul li.con12 .right input[type='email'] {
+    width: 160px;
+}
+#wrap .container #main .content ul li.con12 .right .dash {
+    padding: 0 5px;
+}
+#wrap .container #main .content ul li.con12 .right select {
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 0 0 8px;
+    font-size: 15px;
+    background-color: #fff2f2;
+    border: 1px solid #ffd7d2;
+}
+#wrap .container #main .content ul li.con12 .right span:nth-child(4){
+    padding-left: 10px;
+}
+
+
+#wrap .container #main .content ul li .right input[type='email'].emailDomain.on {
+    background-color: #f1f1f1;
+    border-color: #ccc;
+    color: #6c6d73;
+}
+
+/*con13*/
+
+#wrap .container #main .content ul li.con13 .right {}
+#wrap .container #main .content ul li.con13 .right p {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 40px;
+    overflow: hidden;
+}
+#wrap .container #main .content ul li.con13 .right p input[type='text'] {
+    background: none;
+    border: none;
+    width: 646px;
+}
+
+
+/*con14*/
+
+#wrap .container #main .content ul li.con14 {
+    height: 50px;
+}
+#wrap .container #main .content ul li.con14 .left {
+    line-height: 25px;
+}
+
+#wrap .container #main .content ul li.con14 .right {
+    display: flex;
+}
+
+#wrap .container #main .content ul li.con14 .right .bg-chk {
+    position: relative;
+    margin-right: 30px;
+}
+#wrap .container #main .content ul li.con14 .right .bg-chk input[type='radio'] {
+    background: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#wrap .container #main .content ul li.con14 .right .bg-chk input[type='radio']:checked {
+    border: 6px solid #44465c;
+    appearance: none;
+}
+
+#wrap .container #main .content ul li.con14 .right .bg-chk input[type='radio']:focus {
+    outline: 1px solid #0037ff;
+}
+
+
+#wrap .container #main .content ul li.con14 .right .bg-chk label {
+    position: relative;
+    padding: 3px 0 0 27px;
+    line-height: 20px;
+}
+#wrap .container #main .content ul li.con14 .right .bg-chk:nth-child(2){
+    margin-left: 20px;
+}
+
+/*button*/
+
+#wrap .container #main .content .button-box {
+    width: 100%;
+    margin: 30px 0 0 0 ;
+    border: none;
+    text-align: center;
+}
+#wrap .container #main .content .button-box button a{
+    display: block;
+    width: 80px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#wrap .container #main .content .button-box button.check a {
+    background-color: #ee0700;
+    color: #fff;
+}
+#wrap .container #main .content .button-box button.cancle a {
+    background-color: #fff;
+    border: 1px solid #69727e;
+    color: #44465c;
+    margin-left: 12px;
+}
+
+
+#wrap .container #footer {
+    width: 100%;
+    height: 200px;
+}
+
+#wrap #modal { 
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29,29,29,0.75);
+    padding: 20px;
+    z-index: 4;
+    overflow: scroll;
+    display: none;
+}
+#wrap #modal.modal.on {
+    display: block;
+}
+
+
+#wrap #modal .modal-content {
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 17px 57px 17px 17px;
+    text-align: left;
+    padding: 40px;
+    box-shadow: 0 0 10px #000;
+    background: #fff;
+}
+
+#wrap #modal .modal-content .modal-title {
+    font-size: 21px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #3a3a4a;
+    margin-bottom: 27px;
+}
+#wrap #modal .modal-content .modal-title .modal-img {}
+#wrap #modal .modal-content .modal-title .modal-img img {
+    width: 100%;
+}
+#wrap #modal .modal-content .close {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#wrap #modal .modal-content .close button {
+    color: #44465c;
+    font-size: 15px;
+    line-height: 48px;
+    border: 1px solid #69727e;
+    width: 80px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 4px;
+}
+
+#wrap #modal .modal-content .close button:hover {
+    background: #f0f0f0;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/lib/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header">
+                <div class="title">
+                    <h1>회원가입</h1>
+                    <ul class="icon">
+                        <li><a href="#" title="프린트하기">
+                            <i class="img a"></i>
+                        </a></li>
+                        <li><a href="#" title="공유하기">
+                            <i class="img b"></i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <div class="box">
+                        <ol>
+                            <li class=""><strong>01</strong><span>약관동의</span></li> 
+                            <li class="cur"><strong>02</strong><span>가입정보입력</span></li>
+                            <li class=""><strong>03</strong><span>가입완료</span></li>
+                        </ol>
+                    </div>
+                    <div class="guide">
+                        <p>개인(직장가입자)이 아닌 <strong>사업장업무를 위한 회원가입</strong>입니다.</p>
+                        <p>사업장관리번호 및 단위 사업장 기호가 다른 경우에는 각각 회원가입을 하셔야 합니다.</p>
+                        <p>예) 건설현장 사업장마다 사업장관리번호가 각각 적용되오니 회원가입도 각각 하셔야 해당 업무를 이용하실 수 있습니다.</p>
+                    </div>
+                </div>
+            </header>
+            <main id="main">
+                <p class="compulsory">표는 필수 입력 사항이며, [동일아이디검색] 및 [가입여부확인] 버튼을 반드시 눌러주세요.</p>
+                    <div class="content">
+                        <ul>
+                            <li class="con1">
+                                <div class="left">
+                                    사업장관리번호
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="firmNum" id="firmNum" class="" title="사업장관리번호 입력" maxlength="11" >
+                                    <button class="firm-btn1">사업장관리번호 확인</button>
+                                    <button class="firm-btn2">사업장관리번호 확인방법</button>
+                                </div>
+                            </li>
+                            <li class="con2">
+                                <div class="left">
+                                    사업장기호
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="firmSym" id="firmSym" class="" title="사업장관리번호확인 버튼을 클릭하여 검증하시면 자동입력 됩니다." placeholder="사업장관리번호확인 버튼을 클릭하여 검증하시면 자동입력 됩니다." readonly/>
+                                </div>
+                            </li>
+                            <li class="con3">
+                                <div class="left">
+                                    단위사업장기호
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <button class="unitSerch">단위사업장검색</button>
+                                    <input type="text" name="nuit" id="nuit" title="단위사업장기호 입력" >
+                                    <button class="unit-btn">가입여부 확인하기(실명확인)</button>
+                                </div>
+                            </li>
+                            <li class="con4">
+                                <div class="left">
+                                    아이디
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="id" id="id" title="아이디" class="id" placeholder="영문+ 숫자 6~10 이내" maxlength="10">
+                                    <button class="id-double-btn">아이디 중복검색</button>
+                                </div>
+                            </li>
+                            <li class="con5">
+                                <div class="left">
+                                    비밀번호
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="password" name="pw" id="pw" title="비밀번호" class="pw" placeholder="영문+ 숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="12">
+                                </div>
+                            </li>
+                            <li class="con6">
+                                <div class="left">
+                                    비밀번호확인
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="password" name="rpw" id="rpw" title="비밀번호" class="rpw" placeholder="영문+ 숫자+특수문자(!@#$) 각 1자 이상 포함하여 9~12자 이내" maxlength="12">
+                                </div>
+                            </li>
+                            <li class="con7">
+                                <div class="left">
+                                    비밀번호 분실 시 확인 질문
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <select name="pwQ" id="pwQ" title="비밀번호 분실시 확인 질문 선택">
+                                        <option value="selected">질문을 선택하세요.</option>
+                                        <option value="나의 아버지 성함은?">나의 아버지 성함은?</option>
+                                        <option value="나의 그리운 고향은?">나의 그리운 고향은?</option>
+                                        <option value="나의 첫째아이 이름은?">나의 첫째아이 이름은?</option>
+                                        <option value="나의 초등학교 이름은?">나의 초등학교 이름은?</option>
+                                        <option value="나의 보물 제1호는?">나의 보물 제1호는?</option>
+                                        <option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
+                                        <option value="나의 인생 좌우명은?">나의 인생 좌우명은?</option>
+                                        <option value="내가 좋아하는 캐릭터는?">내가 좋아하는 캐릭터는?</option>
+                                        <option value="추억하고 싶은 날짜가 있다면?">추억하고 싶은 날짜가 있다면?</option>
+                                        <option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
+                                        <option value="내가 가장 존경하는 인물은?">내가 가장 존경하는 인물은?</option>
+                                        <option value="가장 기억에 남는 선생님 성함은?">가장 기억에 남는 선생님 성함은?</option>
+                                        <option value="내가 받았던 선물 중 기억에 남는 선물은?">내가 받았던 선물 중 기억에 남는 선물은?</option>
+                                        <option value="input">직접입력</option>
+                                    </select>
+                                    <input type="text" name="pwQinput" id="pwQinput" class="pwQinput" title="비밀번호 분실시 확인 질문 직접입력" placeholder="질문을 직접 입력해 주세요. 조회질문은 20자이내 (공란포함)입니다." maxlength="20">
+                                </div>
+                            </li>
+                            <li class="con8">
+                                <div class="left">
+                                    비밀번호 분실 시 확인 답변
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="pwA" id="pwA" class="" title="비밀번호 분실 시 조회 답변 입력" placeholder="조회 답변은 띄어쓰기 포함 10자 이내" maxlength="10">
+                                </div>
+                            </li>
+                            <li class="con9">
+                                <div class="left">
+                                    전화번호
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="phone" id="phone" class="" title="“-(하이픈)” 없이 입력 (예 : 01012345678) 전화번호 입력" placeholder="“-(하이픈)” 없이 입력 (예 : 01012345678)" maxlength="11">
+                                </div>
+                            </li>
+                            <li class="con10">
+                                <div class="left">팩스번호</div>
+                                <div class="right">
+                                    <input type="text" name="fax" id="fax" class="" title="“-(하이픈)” 없이 입력 (예 : 021230000) 팩스번호 입력" placeholder="“-(하이픈)” 없이 입력 (예 : 021230000)" maxlength="12">
+                                </div>
+                            </li>
+                            <li class="con11">
+                                <div class="left">
+                                    업무담당자명
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <input type="text" name="person" id="person" class="" title="사업장의 소속된 직장 가입자 직원 또는 대표자 업무담당자명 입력" placeholder="사업장의 소속된 직장 가입자 직원 또는 대표자" maxlength="10">
+                                </div>
+                            </li>
+                            <li class="con12">
+                                <div class="left">
+                                    이메일
+                                    <em class="mark" title="필수입력"></em>
+                                </div>
+                                <div class="right">
+                                    <span>
+                                        <input type="email" name="email" id="email" class="" title="이메일 아이디를 입력해 주세요." maxlength="40">
+                                    </span>
+                                    <em class="dash">@</em>
+                                    <span>
+                                        <input type="email" name="emailDomain" id="emailDomain" class="emailDomain" title="이메일 도메인 직접입력" maxlength="40">
+                                    </span>
+                                    <span>
+                                        <select name="emailDomainSel" id="emailDomainSel" title="이메일 호스팅 선택">
+                                            <option value="selected">직접입력</option>
+                                            <option value="naver.com">네이버</option>
+                                            <option value="nate.com">네이트</option>
+                                            <option value="daum.net">다음(한메일)</option>
+                                            <option value="yahoo.co.kr">야후</option>
+                                            <option value="hotmail.com">핫메일(MSN)</option>
+                                            <option value="gmail.com">Gmail</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="con13">
+                                <div class="left">홈페이지주소</div>
+                                <div class="right">
+                                    <p>
+                                        <span>http://</span>
+                                        <input type="text" name="Url" id="Url" class="" title="홈페이지주소 입력">
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="con14">
+                                <div class="left">소식지 수신여부</div>
+                                <div class="right">
+                                    <div class="bg-chk">
+                                        <input type="radio" name="info" id="info-ok">
+                                        <label for="ok">받음</label>
+                                    </div>
+                                    <div class="bg-chk">
+                                        <input type="radio" name="info" id="info2-no" class="">
+                                        <label for="no">안받음 (공단의 다양한 소식을 무료로 만나보세요)</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button-box">
+                            <button type="button" class="check"><a href="#">확인</a></button>
+                            <button type="button" class="cancle"><a href="./index_intro.html">취소</a></button>
+                        </div>
+                    </div>
+                </main>
+                <footer id="footer">
+                </footer>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p class="modal-title">사업장 관리번호 확인방법</p>
+                <div class="modal-img">
+                    <img src="./images/img_mgmt_no.png" alt="사업장 관리번호 확인방법 아래 내용 참조">
+                </div>
+                <div class="close">
+                <button>닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/health.js"></script>
+    
+</body>
+</html>
